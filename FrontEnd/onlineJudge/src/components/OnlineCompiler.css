@@ -1,0 +1,172 @@
+.custom-select {
+  appearance: none;
+  background-color: #1e293b;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 0.875rem; /* Smaller font size */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.custom-select:hover {
+  background-color: #334155;
+}
+.custom-select:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.5);
+}
+.run-button {
+  background-color: #10b981; /* Green color */
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 0.875rem; /* Smaller font size */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.run-button:hover {
+  background-color: #059669; /* Darker green on hover */
+}
+.textarea {
+  width: 100%;
+  height: 100px;
+  background-color: #1e293b;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  font-size: 1rem;
+  margin-top: 1rem;
+  resize: none;
+}
+.textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+/* OnlineCompiler.css */
+
+.back-button {
+  background-color: #3182ce; /* Blue background */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 16px;
+}
+
+.back-button:hover {
+  background-color: #2b6cb0; /* Darker blue for hover effect */
+}
+
+.custom-select {
+  padding: 8px;
+  border-radius: 4px;
+  background-color: #2d3748;
+  color: white;
+}
+
+.run-button {
+  background-color: #16a34a; /* Green background */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.run-button:hover {
+  background-color: #15803d; /* Darker green for hover effect */
+}
+
+.textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: #2d3748;
+  color: white;
+  border: 1px solid #4a5568;
+  resize: none;
+}
+
+/* Basic styling for the header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background-color: #2d3748;
+}
+
+header .text-xl {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+header .back-button,
+header .run-button,
+header .custom-select {
+  margin-left: 8px;
+}
+
+.back-button {
+  background-color: #3182ce; /* Blue color */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background-color: #2b6cb0; /* Darker blue for hover effect */
+}
+
+.run-button {
+  background-color: #10b981; /* Green color */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.run-button:hover {
+  background-color: #059669; /* Darker green for hover effect */
+}
+
+.custom-select {
+  background-color: #edf2f7;
+  color: #2d3748;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+/* Basic styling for the textareas */
+.textarea {
+  width: 100%;
+  height: 100px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #e2e8f0;
+  background-color: #1a202c;
+  color: #edf2f7;
+  resize: none;
+}
+
+textarea::placeholder {
+  color: #e2e8f0;
+}
+
+/* CodeMirror container */
+.CodeMirror {
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+}

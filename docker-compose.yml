@@ -1,0 +1,38 @@
+# version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:6
+    container_name: oj-mongodb
+    ports:
+      - "27018:27017"
+    volumes:
+      - mongo-data:/data/db
+
+  backend:
+    build: ./BackEnd
+    container_name: oj-backend
+    ports:
+      - "3001:3002"
+    # environment:
+    #   - MONGO_URI=mongodb://mongodb:27017/test
+    env_file:
+    - ./BackEnd/.env
+    depends_on:
+      - mongodb
+    volumes:
+      - ./BackEnd:/app
+    working_dir: /app
+    command: node index.js  # Matches your Dockerfile CMD
+
+  frontend:
+    build:
+      context: ./FrontEnd/onlinejudge
+    container_name: oj-frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+
+volumes:
+  mongo-data:

@@ -1,145 +1,201 @@
--  My Online Judge
+# **🧑‍⚖️ My Online Judge**
 
-An \*\*Online Judge\*\* platform where users can submit code in multiple languages (C++, Java, Python), get it com This project features:
+# **🧑‍⚖️ My Online Judge**
 
-- nnn Code editor with syntax highlighting for multiple languages
-- n Code submission and execution engine
-- n Evaluation based on predefined test cases
-- n User roles (admin, user) and secure login/signup
-- n Full-stack architecture (MongoDB + Node.js + React + Docker)
+An \*\*Online Judge\*\* platform where users can submit code in multiple languages (C++, Java, Python), get it compiled and evaluated, and view results — just like LeetCode, HackerRank, or Codeforces.
 
-\---
+This project features:
 
-\## nn Demo
+\- 👨‍💻 Code editor with syntax highlighting for multiple languages
 
-- [Watch Demo Video](#)  
+\- 📤 Code submission and execution engine
 
-\*(Replace  #  with actual YouTube or Drive link)\*
+\- 📊 Evaluation based on predefined test cases
 
-\---
+\- 🔐 User roles (admin, user) and secure login/signup
 
-\## n Project Structure
+\- 🌐 Full-stack architecture (MongoDB + Node.js + React + Docker)
+
+
+
+## **📽️ Demo**
+
+👉 [Watch Demo Video](#)  
+
+\*(Replace `#` with actual YouTube or Drive link)\*
+
+
+
+## **🧱 Project Structure**
+
 
 project-root/
 
-n
+│
 
-nnn BackEnd/                   # Node.js backend with code execution logic
+├── BackEnd/                   # Node.js backend with code execution logic
 
-- nnn index.js
-- nnn Dockerfile
-- nnn .env                   # For MongoDB URI, ports, etc.
+│   ├── index.js
 
-n
+│   ├── Dockerfile
 
-nnn FrontEnd/
+│   └── .env                   # For MongoDB URI, ports, etc.
 
-- nnn onlinejudge/           # Vite + React frontend
-- nnn Dockerfile
-- nnn vite.config.js
-- nnn src/
+│
 
-n
+├── FrontEnd/
 
-nnn docker-compose.yml         # Spin up MongoDB, backend, and frontend nnn README.md
+│   └── onlinejudge/           # Vite + React frontend
 
-\---
+│       ├── Dockerfile
 
-\## n Features
+│       ├── vite.config.js
+
+│       └── src/
+
+│
+
+├── docker-compose.yml         # Spin up MongoDB, backend, and frontend
+
+└── README.md
+
+
+
+
+## **🚀 Features**
 
 | Feature | Description |
 
 \|--------|-------------|
 
-| -n Code Editor | Built with  @uiw/react-codemirror  and CodeMirror syntax support |
+| ✍️ Code Editor | Built with `@uiw/react-codemirror` and CodeMirror syntax support |
 
-| nn Language Support | C++, Java, Python (compiled and executed in backend container) | | n API Backend | Express-based backend connected to MongoDB |
+| ⚙️ Language Support | C++, Java, Python (compiled and executed in backend container) |
 
-| n User Management | Signup/Login with roles and secure password hashing |
+| 📡 API Backend | Express-based backend connected to MongoDB |
 
-| n Dockerized | Fully containerized using Docker Compose |
+| 📚 User Management | Signup/Login with roles and secure password hashing |
 
-| n Persistent MongoDB | All data is stored in Docker volumes and is preserved across restarts |
+| 🐳 Dockerized | Fully containerized using Docker Compose |
 
-\---
+| 💾 Persistent MongoDB | All data is stored in Docker volumes and is preserved across restarts |
 
-\## n Manual Local Setup (without Docker) > Only if you don't want Docker ### nn Backend
 
-`   `bash
 
-cd BackEnd npm install npm start
+## **🔧 Manual Local Setup (without Docker)**
 
-- Backend runs on: [http://localhost:3002](http://localhost:3002)
+\> Only if you don't want Docker
 
-Ensure you have MongoDB running locally or update the  .env  with your connection string. ### n Frontend
+### **🖥️ Backend**
 
-`   `bash
 
-cd FrontEnd/onlinejudge npm install
+cd BackEnd
+
+npm install
+
+npm start
+
+
+\- Backend runs on: [http://localhost:3002](http://localhost:3002)
+
+Ensure you have MongoDB running locally or update the `.env` with your connection string.
+
+### **💻 Frontend**
+
+
+cd FrontEnd/onlinejudge
+
+npm install
 
 npm run dev
 
-- Frontend runs on: [http://localhost:5173](http://localhost:5173) ---
 
-  ## n Docker Setup (Recommended)
+\- Frontend runs on: [http://localhost:5173](http://localhost:5173)
 
-  ### Prerequisites
 
-- Docker & Docker Compose installed
 
-\### n Quick Start
+## **🐳 Docker Setup (Recommended)**
 
-`   `bash
+### **Prerequisites**
 
-- From the root of the project docker-compose up --build
+\- Docker & Docker Compose installed
 
-  ### nn Ports Used
+### **🧪 Quick Start**
 
-  | Component | Container Port | Host Port | URL | |----------|----------------|-----------|-----|
 
-  | Backend  | 3002           | 3001      | [http://localhost:3001](http://localhost:3001) | | Frontend | 80             | 5173      | [http://localhost:5173](http://localhost:5173) |
+# **From the root of the project**
+docker-compose up --build
 
-  | MongoDB  | 27017          | 27017     |  mongodb://localhost:27017  |
 
-  ### nn MongoDB Data Persistence
+### **⛓️ Ports Used**
 
-  MongoDB uses Docker volumes so that your data is safe even after shutdown:
+| Component | Container Port | Host Port | URL |
 
-  `   `yaml volumes:
+\|----------|----------------|-----------|-----|
 
-  `  `mongo-data:
+| Backend  | 3002           | 3001      | [http://localhost:3001](http://localhost:3001) |
 
-  You can explore it using MongoDB Compass: mongodb://localhost:27017
+| Frontend | 80             | 5173      | [http://localhost:5173](http://localhost:5173) |
 
-  ---
+| MongoDB  | 27017          | 27017     | `mongodb://localhost:27017` |
 
-  ## n API Endpoints
+### **🗃️ MongoDB Data Persistence**
 
-  | Method | Endpoint       | Description             | |--------|----------------|-------------------------|
+MongoDB uses Docker volumes so that your data is safe even after shutdown:
 
-  | POST   |  /signUp       | Register a new user     | | POST   |  /login        | Authenticate a user     |
 
-  | POST   |  /submit       | Submit code for testing | | GET    |  /results      | Fetch results           |
+volumes:
 
-  ---
+`  `mongo-data:
 
-  ## n Contributing
 
-  Contributions are welcome! To contribute:
+You can explore it using MongoDB Compass:
 
-1. Fork the repository
-1. Create a new branch ( git checkout -b feature-x )
-1. Commit your changes
-1. Push to the branch ( git push origin feature-x )
-1. Open a Pull Request
+mongodb://localhost:27017
 
-\---
 
-\## nn License
 
-MIT License. See  LICENSE  file for details. ---
 
-\## nnnn Questions?
+## **📬 API Endpoints**
 
-If you have any issues, feel free to open an [Issue](https://github.com/your-repo/issues) or reach out via the
-# Online-Judge
+| Method | Endpoint       | Description             |
+
+\|--------|----------------|-------------------------|
+
+| POST   | `/signUp`      | Register a new user     |
+
+| POST   | `/login`       | Authenticate a user     |
+
+| POST   | `/submit`      | Submit code for testing |
+
+| GET    | `/results`     | Fetch results           |
+
+
+
+## **👥 Contributing**
+
+Contributions are welcome! To contribute:
+
+1\. Fork the repository
+
+2\. Create a new branch (`git checkout -b feature-x`)
+
+3\. Commit your changes
+
+4\. Push to the branch (`git push origin feature-x`)
+
+5\. Open a Pull Request
+
+
+
+## **⚖️ License**
+
+MIT License. See `LICENSE` file for details.
+
+
+
+## **🙋‍♂️ Questions?**
+
+If you have any issues, feel free to open an [Issue](https://github.com/your-repo/issues) or reach out via the Issues tab.
+
+

@@ -22,8 +22,6 @@ This project features:
 
 👉 [Watch Demo Video](#)  
 
-\*(Replace `#` with actual YouTube or Drive link)\*
-
 
 
 ## **🧱 Project Structure**
